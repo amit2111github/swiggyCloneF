@@ -9,7 +9,7 @@ import validator from 'validator'
 //TODO:  phone number validation
 // helpers method
 const signup = (phoneNumber, name, email, password) => {
-  return fetch(`http://localhost:5000/user/signup`, {
+  return fetch(`https://sweggy-clone.herokuapp.com/user/signup`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ const signup = (phoneNumber, name, email, password) => {
     })
 }
 const signInAndVerifyOTP = (email, otp) => {
-  return fetch(`http://localhost:5000/user/login/verify-otp`, {
+  return fetch(`https://sweggy-clone.herokuapp.com/user/login/verify-otp`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
