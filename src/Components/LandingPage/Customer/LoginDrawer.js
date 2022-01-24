@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField'
 import validator from 'validator'
 
 const signInAndVerifyOTP = (email, otp) => {
-  return fetch(`http://localhost:5000/user/login/verify-otp`, {
+  return fetch(`https://sweggy-clone.herokuapp.com/user/login/verify-otp`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -19,7 +19,7 @@ const signInAndVerifyOTP = (email, otp) => {
     .catch((err) => console.log(err))
 }
 const getOtpForLogin = (email, password) => {
-  return fetch(`http://localhost:5000/user/login`, {
+  return fetch(`https://sweggy-clone.herokuapp.com/user/login`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
